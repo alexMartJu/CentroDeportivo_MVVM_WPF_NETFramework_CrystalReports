@@ -3,10 +3,73 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:CentroDeportivo.View"
+        xmlns:vm="clr-namespace:CentroDeportivo.ViewModel;assembly=CentroDeportivo.ViewModel"
+        xmlns:vmv="clr-namespace:CentroDeportivo.ViewModel.Views;assembly=CentroDeportivo.ViewModel"
+        xmlns:local="clr-namespace:CentroDeportivo.View.Views"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Centro Deportivo - Gestión de Reservas"
+        Height="650" Width="1100"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="#FFF0F0F0">
+
+
+
+    <Window.Resources>
+        <!-- Estilo del menú superior -->
+        <Style x:Key="TopMenuRadioButton" TargetType="RadioButton">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="14,0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="GroupName" Value="TopMenu"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="RadioButton">
+                        <Border x:Name="border" Padding="12,6" Background="Transparent" CornerRadius="6">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#335D7FA3"/>
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#FF8C42"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <!-- DataTemplates para cargar vistas automáticamente -->
+        <DataTemplate DataType="{x:Type vmv:SociosViewModel}">
+            <local:SociosView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vmv:ActividadesViewModel}">
+            <local:ActividadesView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vmv:ReservasViewModel}">
+            <local:ReservasView />
+        </DataTemplate>
+    </Window.Resources>
     <Grid>
-        
+        <DockPanel LastChildFill="True">
+            <!-- MENÚ SUPERIOR -->
+            <Border DockPanel.Dock="Top" Height="60" Background="#2B2E34">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <RadioButton Style="{StaticResource TopMenuRadioButton}" Content="Socios" Command="{Binding MostrarSociosCommand}" IsChecked="True"/>
+                    <RadioButton Style="{StaticResource TopMenuRadioButton}" Content="Actividades" Command="{Binding MostrarActividadesCommand}"/>
+                    <RadioButton Style="{StaticResource TopMenuRadioButton}" Content="Reservas" Command="{Binding MostrarReservasCommand}"/>
+                </StackPanel>
+            </Border>
+            <!-- TÍTULO DINÁMICO -->
+            <Border DockPanel.Dock="Top" Background="White" Padding="12" BorderBrush="#E0E0E0" BorderThickness="0,0,0,1">
+                <TextBlock Text="{Binding Titulo}" Foreground="#FF8C42" FontSize="22" FontWeight="Bold" HorizontalAlignment="Center"/>
+            </Border>
+            <!-- CONTENIDO PRINCIPAL -->
+            <Border Padding="20" Background="Transparent">
+                <ContentControl Content="{Binding VistaActual}"/>
+            </Border>
+        </DockPanel>
     </Grid>
 </Window>

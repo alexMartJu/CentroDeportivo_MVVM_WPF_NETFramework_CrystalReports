@@ -12,19 +12,19 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using CentroDeportivo.ViewModel;
+using CentroDeportivo.ViewModel.Views;
 
-namespace CentroDeportivo.View
+namespace CentroDeportivo.View.Views
 {
     /// <summary>
-    /// Lógica de interacción para MainWindow.xaml
+    /// Lógica de interacción para SociosView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class SociosView : UserControl
     {
-        public MainWindow()
+        public SociosView()
         {
             InitializeComponent();
-            DataContext = new MainWindowViewModel();
+            DataContext = new SociosViewModel();
         }
     }
 }
