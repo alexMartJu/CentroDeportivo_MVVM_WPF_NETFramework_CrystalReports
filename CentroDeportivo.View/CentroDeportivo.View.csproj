@@ -38,11 +38,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="SAPBusinessObjects.WPF.Viewer, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win64_x64\dotnet\SAPBusinessObjects.WPF.Viewer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -65,8 +70,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Informes\InformeHistorialReservasWindow.xaml.cs">
+      <DependentUpon>InformeHistorialReservasWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\InformeReservasActividadWindow.xaml.cs">
+      <DependentUpon>InformeReservasActividadWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\InformeSociosWindow.xaml.cs">
+      <DependentUpon>InformeSociosWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Services\WindowService.cs" />
     <Compile Include="Views\ActividadesView.xaml.cs">
       <DependentUpon>ActividadesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InformesView.xaml.cs">
+      <DependentUpon>InformesView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ReservasView.xaml.cs">
       <DependentUpon>ReservasView.xaml</DependentUpon>
@@ -74,6 +92,18 @@
     <Compile Include="Views\SociosView.xaml.cs">
       <DependentUpon>SociosView.xaml</DependentUpon>
     </Compile>
+    <Page Include="Informes\InformeHistorialReservasWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Informes\InformeReservasActividadWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Informes\InformeSociosWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -87,6 +117,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Views\ActividadesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\InformesView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -127,6 +161,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CentroDeportivo.Informes\CentroDeportivo.Informes.csproj">
+      <Project>{feaa0b58-39be-4ef2-8dd0-cd007494b8fa}</Project>
+      <Name>CentroDeportivo.Informes</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CentroDeportivo.ViewModel\CentroDeportivo.ViewModel.csproj">
       <Project>{392fe843-91cb-4252-9f3c-9d098d181fc2}</Project>
       <Name>CentroDeportivo.ViewModel</Name>

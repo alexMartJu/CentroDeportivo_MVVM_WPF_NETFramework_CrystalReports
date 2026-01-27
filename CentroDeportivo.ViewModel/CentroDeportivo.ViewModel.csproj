@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -54,6 +57,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseViewModel.cs" />
+    <Compile Include="Informes\dsInformes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsInformes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\Helpers\InformeHistorialHelper.cs" />
+    <Compile Include="Informes\Helpers\InformeReservasActividadHelper.cs" />
+    <Compile Include="Informes\Helpers\InformeSociosHelper.cs" />
+    <Compile Include="Informes\InformeHistorialViewModel.cs" />
+    <Compile Include="Informes\InformeReservasActividadViewModel.cs" />
+    <Compile Include="Informes\InformeSociosViewModel.cs" />
     <Compile Include="MainWindowViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RelayCommand.cs" />
@@ -61,22 +75,40 @@
     <Compile Include="Services\IActividadService.cs" />
     <Compile Include="Services\IReservaService.cs" />
     <Compile Include="Services\ISocioService.cs" />
+    <Compile Include="Services\IWindowService.cs" />
     <Compile Include="Services\ReservaService.cs" />
     <Compile Include="Services\SocioService.cs" />
     <Compile Include="Views\ActividadesViewModel.cs" />
+    <Compile Include="Views\InformesViewModel.cs" />
     <Compile Include="Views\ReservasViewModel.cs" />
     <Compile Include="Views\SociosViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Informes\dsInformes.xsc">
+      <DependentUpon>dsInformes.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\dsInformes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsInformes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\dsInformes.xss">
+      <DependentUpon>dsInformes.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CentroDeportivo.Informes\CentroDeportivo.Informes.csproj">
+      <Project>{FEAA0B58-39BE-4EF2-8DD0-CD007494B8FA}</Project>
+      <Name>CentroDeportivo.Informes</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CentroDeportivo.Model\CentroDeportivo.Model.csproj">
       <Project>{a7ad8026-afb1-44d8-bb21-ad9721839bc4}</Project>
       <Name>CentroDeportivo.Model</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

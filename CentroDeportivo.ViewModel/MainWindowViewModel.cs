@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using CentroDeportivo.ViewModel.Services;
 using CentroDeportivo.ViewModel.Views;
 
 namespace CentroDeportivo.ViewModel
@@ -40,6 +41,7 @@ namespace CentroDeportivo.ViewModel
         public ICommand MostrarSociosCommand { get; }
         public ICommand MostrarActividadesCommand { get; }
         public ICommand MostrarReservasCommand { get; }
+        public ICommand MostrarInformesCommand { get; }
 
         public MainWindowViewModel()
         {
@@ -51,6 +53,7 @@ namespace CentroDeportivo.ViewModel
             MostrarSociosCommand = new RelayCommand(_ => VistaActual = new SociosViewModel());
             MostrarActividadesCommand = new RelayCommand(_ => VistaActual = new ActividadesViewModel());
             MostrarReservasCommand = new RelayCommand(_ => VistaActual = new ReservasViewModel());
+            MostrarInformesCommand = new RelayCommand(_ => VistaActual = new InformesViewModel(null));
         }
 
         //ActualizarTitulo() --> Método que actualiza el título según la vista actual
@@ -67,6 +70,10 @@ namespace CentroDeportivo.ViewModel
             else if (VistaActual is ReservasViewModel)
             {
                 Titulo = "Gestión de Reservas";
+            }
+            else if (VistaActual is InformesViewModel) 
+            { 
+                Titulo = "Informes del Centro Deportivo"; 
             }
         }
     }

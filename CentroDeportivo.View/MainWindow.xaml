@@ -51,6 +51,9 @@
         <DataTemplate DataType="{x:Type vmv:ReservasViewModel}">
             <local:ReservasView />
         </DataTemplate>
+        <DataTemplate DataType="{x:Type vmv:InformesViewModel}">
+            <local:InformesView />
+        </DataTemplate>
     </Window.Resources>
     <Grid>
         <DockPanel LastChildFill="True">
@@ -60,6 +63,7 @@
                     <RadioButton Style="{StaticResource TopMenuRadioButton}" Content="Socios" Command="{Binding MostrarSociosCommand}" IsChecked="True"/>
                     <RadioButton Style="{StaticResource TopMenuRadioButton}" Content="Actividades" Command="{Binding MostrarActividadesCommand}"/>
                     <RadioButton Style="{StaticResource TopMenuRadioButton}" Content="Reservas" Command="{Binding MostrarReservasCommand}"/>
+                    <RadioButton Style="{StaticResource TopMenuRadioButton}" Content="Informes" Command="{Binding MostrarInformesCommand}"/>
                 </StackPanel>
             </Border>
             <!-- TÍTULO DINÁMICO -->
