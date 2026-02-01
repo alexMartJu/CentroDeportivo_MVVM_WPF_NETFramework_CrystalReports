@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
@@ -271,10 +272,16 @@ namespace CentroDeportivo.ViewModel.Views
         }
 
         //EsEmailValido() --> Comprueba si un email tiene un formato básico válido.
-        private bool EsEmailValido(string email)
+        public bool EsEmailValido(string email)
         {
-            //Validación simple de email
-            return email.Contains("@") && email.Contains(".");
+            if (string.IsNullOrWhiteSpace(email))
+            {
+                return false;
+            }
+
+            //Patrón estándar para validar emails reales
+            string patron = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            return Regex.IsMatch(email, patron, RegexOptions.IgnoreCase);
         }
     }
 }

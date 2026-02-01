@@ -111,12 +111,18 @@ namespace CentroDeportivo.ViewModel.Views
 
         //Métodos que comprueban si se pueden ejecutar las acciones.
         //Si devuelven false, el botón se deshabilita automáticamente.
+        //EsFechaValida() --> Comprueba si la fecha es hoy o posterior.
+        public bool EsFechaValida(DateTime fecha)
+        {
+            return fecha.Date >= DateTime.Today;
+        }
+
         //PuedeCrear() --> Se puede crear si hay socio y actividad seleccionados y la fecha es hoy o posterior.
         private bool PuedeCrear()
         {
             return SocioSeleccionado != null
                    && ActividadSeleccionada != null
-                   && Fecha.Date >= DateTime.Today;
+                   && EsFechaValida(Fecha);
         }
 
         //PuedeEditar() --> Solo se puede editar si hay una reserva seleccionada y los datos son válidos.
@@ -136,8 +142,8 @@ namespace CentroDeportivo.ViewModel.Views
         {
             MensajeError = string.Empty;
 
-            //Validamos fecha no anterior a hoy
-            if (Fecha.Date < DateTime.Today)
+            //Validamos fecha
+            if (!EsFechaValida(Fecha))
             {
                 MensajeError = "La fecha de la reserva no puede ser anterior a hoy.";
             }
@@ -180,7 +186,7 @@ namespace CentroDeportivo.ViewModel.Views
             {
                 MensajeError = "Debe seleccionar una reserva para editarla.";
             }
-            else if (Fecha.Date < DateTime.Today)
+            else if (!EsFechaValida(Fecha))
             {
                 MensajeError = "La fecha de la reserva no puede ser anterior a hoy.";
             }
