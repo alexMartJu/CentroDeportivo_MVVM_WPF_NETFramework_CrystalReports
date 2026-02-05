@@ -1,4 +1,4 @@
-﻿    using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,13 +9,19 @@ using CrystalDecisions.CrystalReports.Engine;
 
 namespace CentroDeportivo.ViewModel.Informes
 {
-    //ViewModel que controla el informe del historial de reservas.
+    /// <summary>
+    /// ViewModel que controla el informe del historial de reservas.
+    /// </summary>
     public class InformeHistorialViewModel : BaseViewModel
     {
-        //Propiedad que contiene el informe de Crystal Reports.
+        /// <summary>
+        /// Propiedad que contiene el informe de Crystal Reports.
+        /// </summary>
         public ReportDocument Informe { get; }
 
-        //Constructor que carga los datos y prepara el informe.
+        /// <summary>
+        /// Constructor que carga los datos y prepara el informe.
+        /// </summary>
         public InformeHistorialViewModel()
         {
             //Cargar los datos del informe utilizando el helper.

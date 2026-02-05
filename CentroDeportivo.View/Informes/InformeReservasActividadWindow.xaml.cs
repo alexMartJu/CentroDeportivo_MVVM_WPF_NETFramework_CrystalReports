@@ -17,9 +17,14 @@ namespace CentroDeportivo.View.Informes
 {
     /// <summary>
     /// Lógica de interacción para InformeReservasActividadWindow.xaml
+    /// Ventana que muestra el informe de reservas filtradas por actividad
     /// </summary>
     public partial class InformeReservasActividadWindow : Window
     {
+        /// <summary>
+        /// Constructor que inicializa la ventana del informe de reservas por actividad y carga el reporte
+        /// </summary>
+        /// <param name="idActividad">ID de la actividad para filtrar las reservas</param>
         public InformeReservasActividadWindow(int idActividad)
         {
             InitializeComponent();

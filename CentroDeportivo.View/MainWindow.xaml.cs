@@ -18,9 +18,13 @@ namespace CentroDeportivo.View
 {
     /// <summary>
     /// Lógica de interacción para MainWindow.xaml
+    /// Ventana principal de la aplicación que contiene el menú de navegación
     /// </summary>
     public partial class MainWindow : Window
     {
+        /// <summary>
+        /// Constructor que inicializa la ventana principal y configura el DataContext
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();

@@ -17,9 +17,13 @@ namespace CentroDeportivo.View.Informes
 {
     /// <summary>
     /// Lógica de interacción para InformeHistorialReservasWindow.xaml
+    /// Ventana que muestra el informe del historial completo de reservas
     /// </summary>
     public partial class InformeHistorialReservasWindow : Window
     {
+        /// <summary>
+        /// Constructor que inicializa la ventana del informe del historial de reservas y carga el reporte
+        /// </summary>
         public InformeHistorialReservasWindow()
         {
             InitializeComponent();

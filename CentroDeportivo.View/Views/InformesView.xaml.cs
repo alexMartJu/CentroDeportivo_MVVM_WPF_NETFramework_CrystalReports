@@ -19,9 +19,13 @@ namespace CentroDeportivo.View.Views
 {
     /// <summary>
     /// Lógica de interacción para InformesView.xaml
+    /// Vista que muestra la selección y generación de informes
     /// </summary>
     public partial class InformesView : UserControl
     {
+        /// <summary>
+        /// Constructor que inicializa la vista de informes y configura su ViewModel
+        /// </summary>
         public InformesView()
         {
             InitializeComponent();

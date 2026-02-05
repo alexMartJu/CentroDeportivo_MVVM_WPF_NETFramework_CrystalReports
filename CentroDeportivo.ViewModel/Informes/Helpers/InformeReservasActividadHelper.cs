@@ -7,10 +7,16 @@ using CentroDeportivo.Model;
 
 namespace CentroDeportivo.ViewModel.Informes.Helpers
 {
-    //Helper que carga los datos para el informe de reservas por actividad.
+    /// <summary>
+    /// Helper que carga los datos para el informe de reservas por actividad.
+    /// </summary>
     public class InformeReservasActividadHelper
     {
-        //Cargar() --> Método que obtiene los datos de la base de datos y los carga en el dataset.
+        /// <summary>
+        /// Cargar() --> Método que obtiene los datos de la base de datos y los carga en el dataset.
+        /// </summary>
+        /// <param name="idActividad">ID de la actividad para filtrar las reservas</param>
+        /// <returns>Dataset con los datos de las reservas de la actividad especificada</returns>
         public dsInformes Cargar(int idActividad)
         {
             var ds = new dsInformes();

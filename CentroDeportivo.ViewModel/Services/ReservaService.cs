@@ -9,11 +9,16 @@ using CentroDeportivo.ViewModel.Services;
 
 namespace CentroDeportivo.ViewModel.Services
 {
-    //Servicio que se encarga de trabajar con las reservas en la base de datos.
-    //Aquí hacemos todas las operaciones: obtener, añadir, actualizar y eliminar reservas.
+    /// <summary>
+    /// Servicio que se encarga de trabajar con las reservas en la base de datos.
+    /// Aquí hacemos todas las operaciones: obtener, añadir, actualizar y eliminar reservas.
+    /// </summary>
     public class ReservaService : IReservaService
     {
-        //GetAll() --> Método para obtener todas las reservas de la base de datos
+        /// <summary>
+        /// GetAll() --> Método para obtener todas las reservas de la base de datos
+        /// </summary>
+        /// <returns>Colección de reservas con socios y actividades incluidas</returns>
         public IEnumerable<Reservas> GetAll()
         {
             try
@@ -34,7 +39,10 @@ namespace CentroDeportivo.ViewModel.Services
             }
         }
 
-        //Add() --> Método para añadir una nueva reserva a la base de datos
+        /// <summary>
+        /// Add() --> Método para añadir una nueva reserva a la base de datos
+        /// </summary>
+        /// <param name="reserva">Reserva a añadir</param>
         public void Add(Reservas reserva)
         {
             try
@@ -52,7 +60,10 @@ namespace CentroDeportivo.ViewModel.Services
             }
         }
 
-        //Update() --> Método para actualizar una reserva existente en la base de datos
+        /// <summary>
+        /// Update() --> Método para actualizar una reserva existente en la base de datos
+        /// </summary>
+        /// <param name="reserva">Reserva con los datos actualizados</param>
         public void Update(Reservas reserva)
         {
             try
@@ -83,7 +94,10 @@ namespace CentroDeportivo.ViewModel.Services
             }
         }
 
-        //Delete() --> Método para eliminar una reserva de la base de datos
+        /// <summary>
+        /// Delete() --> Método para eliminar una reserva de la base de datos
+        /// </summary>
+        /// <param name="reserva">Reserva a eliminar</param>
         public void Delete(Reservas reserva)
         {
             try
@@ -110,7 +124,12 @@ namespace CentroDeportivo.ViewModel.Services
             }
         }
 
-        //HayAforoDisponible() --> Método para comprobar si hay aforo disponible para una actividad en una fecha dada
+        /// <summary>
+        /// HayAforoDisponible() --> Método para comprobar si hay aforo disponible para una actividad en una fecha dada
+        /// </summary>
+        /// <param name="idActividad">ID de la actividad</param>
+        /// <param name="fecha">Fecha de la reserva</param>
+        /// <returns>True si hay plazas disponibles, false si el aforo está completo</returns>
         public bool HayAforoDisponible(int idActividad, DateTime fecha)
         {
             try

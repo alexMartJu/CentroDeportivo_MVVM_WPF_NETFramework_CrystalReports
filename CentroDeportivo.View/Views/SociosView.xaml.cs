@@ -18,9 +18,13 @@ namespace CentroDeportivo.View.Views
 {
     /// <summary>
     /// Lógica de interacción para SociosView.xaml
+    /// Vista que muestra la gestión de socios
     /// </summary>
     public partial class SociosView : UserControl
     {
+        /// <summary>
+        /// Constructor que inicializa la vista de socios y configura su ViewModel
+        /// </summary>
         public SociosView()
         {
             InitializeComponent();

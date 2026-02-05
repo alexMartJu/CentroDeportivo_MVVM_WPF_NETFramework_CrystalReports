@@ -3,10 +3,15 @@ using CentroDeportivo.ViewModel.Views;
 
 namespace CentroDeportivo.Tests;
 
+/// <summary>
+/// Clase de pruebas para validar el formato de emails
+/// </summary>
 [TestClass]
 public class EmailTests
 {
-    //EmailValido_DebeSerTrue() --> Verifica que un email con formato correcto sea considerado válido.
+    /// <summary>
+    /// EmailValido_DebeSerTrue() --> Verifica que un email con formato correcto sea considerado válido.
+    /// </summary>
     [TestMethod]
     public void EmailValido_DebeSerTrue()
     {
@@ -23,7 +28,9 @@ public class EmailTests
 
     }
 
-    //EmailInvalido_DebeSerFalse() --> Verifica que un email sin formato correcto sea considerado inválido.
+    /// <summary>
+    /// EmailInvalido_DebeSerFalse() --> Verifica que un email sin formato correcto sea considerado inválido.
+    /// </summary>
     [TestMethod]
     public void EmailValido_DebeSerFalse()
     {

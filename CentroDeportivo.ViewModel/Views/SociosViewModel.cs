@@ -12,19 +12,27 @@ using CentroDeportivo.ViewModel.Services;
 
 namespace CentroDeportivo.ViewModel.Views
 {
-    //ViewModel que controla toda la parte de socios en la aplicación. 
-    //Aquí gestionamos lo que se muestra en pantalla y lo que hace el usuario.
+    /// <summary>
+    /// ViewModel que controla toda la parte de socios en la aplicación. 
+    /// Aquí gestionamos lo que se muestra en pantalla y lo que hace el usuario.
+    /// </summary>
     public class SociosViewModel : BaseViewModel
     {
         //Servicio que se encarga de hablar con la base de datos.
         private readonly ISocioService _socioService;
 
-        //Lista de socios que se muestra en el DataGrid. 
-        //ObservableCollection se usa para que la pantalla se actualice sola cuando cambia la lista.
+        /// <summary>
+        /// Lista de socios que se muestra en el DataGrid. 
+        /// ObservableCollection se usa para que la pantalla se actualice sola cuando cambia la lista.
+        /// </summary>
         public ObservableCollection<Socios> Socios { get; set; }
 
         //Socio que el usuario selecciona en el DataGrid.
         private Socios _socioSeleccionado;
+        
+        /// <summary>
+        /// Socio seleccionado actualmente en el DataGrid
+        /// </summary>
         public Socios SocioSeleccionado
         {
             get => _socioSeleccionado;
@@ -37,10 +45,16 @@ namespace CentroDeportivo.ViewModel.Views
             }
         }
 
-        //Propiedades del formulario donde el usuario escribe los datos.
+        /// <summary>
+        /// ID del socio actualmente en el formulario
+        /// </summary>
         public int IdSocio { get; set; }
 
         private string _nombre;
+        
+        /// <summary>
+        /// Nombre del socio en el formulario
+        /// </summary>
         public string Nombre
         {
             get => _nombre;
@@ -52,6 +66,10 @@ namespace CentroDeportivo.ViewModel.Views
         }
 
         private string _email;
+        
+        /// <summary>
+        /// Email del socio en el formulario
+        /// </summary>
         public string Email
         {
             get => _email;
@@ -63,6 +81,10 @@ namespace CentroDeportivo.ViewModel.Views
         }
 
         private bool _activo = true;
+        
+        /// <summary>
+        /// Estado activo/inactivo del socio
+        /// </summary>
         public bool Activo
         {
             get => _activo;
@@ -75,6 +97,10 @@ namespace CentroDeportivo.ViewModel.Views
 
         //Aquí guardamos mensajes de error para mostrarlos en pantalla.
         private string _mensajeError;
+        
+        /// <summary>
+        /// Mensaje de error que se muestra en la interfaz
+        /// </summary>
         public string MensajeError
         {
             get => _mensajeError;
@@ -85,12 +111,24 @@ namespace CentroDeportivo.ViewModel.Views
             }
         }
 
-        //Commands que se ejecutan cuando el usuario pulsa los botones.
+        /// <summary>
+        /// Comando para crear un nuevo socio
+        /// </summary>
         public ICommand CrearCommand { get; }
+        
+        /// <summary>
+        /// Comando para editar el socio seleccionado
+        /// </summary>
         public ICommand EditarCommand { get; }
+        
+        /// <summary>
+        /// Comando para eliminar el socio seleccionado
+        /// </summary>
         public ICommand EliminarCommand { get; }
 
-        //Constructor del ViewModel
+        /// <summary>
+        /// Constructor del ViewModel que inicializa servicios, carga datos y configura comandos
+        /// </summary>
         public SociosViewModel()
         {
             _socioService = new SocioService(); //Inicializamos el servicio.
@@ -271,7 +309,11 @@ namespace CentroDeportivo.ViewModel.Views
             }
         }
 
-        //EsEmailValido() --> Comprueba si un email tiene un formato básico válido.
+        /// <summary>
+        /// EsEmailValido() --> Comprueba si un email tiene un formato básico válido.
+        /// </summary>
+        /// <param name="email">Email a validar</param>
+        /// <returns>True si el email es válido, false en caso contrario</returns>
         public bool EsEmailValido(string email)
         {
             if (string.IsNullOrWhiteSpace(email))

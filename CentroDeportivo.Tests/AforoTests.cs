@@ -3,10 +3,15 @@ using CentroDeportivo.ViewModel.Services;
 
 namespace CentroDeportivo.Tests;
 
+/// <summary>
+/// Clase de pruebas para validar el control de aforo en reservas
+/// </summary>
 [TestClass]
 public class AforoTests
 {
-    //AforoMaximo_NoPermiteSegundaReserva() --> Verifica que no se puedan hacer reservas si el aforo máximo de la actividad ya está completo.
+    /// <summary>
+    /// AforoMaximo_NoPermiteSegundaReserva() --> Verifica que no se puedan hacer reservas si el aforo máximo de la actividad ya está completo.
+    /// </summary>
     [TestMethod]
     public void AforoMaximo_NoPermiteSegundaReserva()
     {

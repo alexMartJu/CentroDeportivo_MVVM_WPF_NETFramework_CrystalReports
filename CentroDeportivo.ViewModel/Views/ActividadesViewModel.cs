@@ -12,17 +12,25 @@ using CentroDeportivo.ViewModel.Services;
 
 namespace CentroDeportivo.ViewModel.Views
 {
-    //ViewModel que controla toda la parte de actividades en la aplicación.
+    /// <summary>
+    /// ViewModel que controla toda la parte de actividades en la aplicación.
+    /// </summary>
     public class ActividadesViewModel : BaseViewModel
     {
         //Servicio que se encarga de hablar con la base de datos.
         private readonly IActividadService _actividadService;
 
-        //Lista de actividades que se muestra en el DataGrid.
+        /// <summary>
+        /// Lista de actividades que se muestra en el DataGrid.
+        /// </summary>
         public ObservableCollection<Actividades> Actividades { get; set; }
 
         //Actividad que el usuario selecciona en el DataGrid.
         private Actividades _actividadSeleccionada;
+        
+        /// <summary>
+        /// Actividad seleccionada actualmente en el DataGrid
+        /// </summary>
         public Actividades ActividadSeleccionada
         {
             get => _actividadSeleccionada;
@@ -35,10 +43,16 @@ namespace CentroDeportivo.ViewModel.Views
             }
         }
 
-        //Propiedades del formulario donde el usuario escribe los datos.
+        /// <summary>
+        /// ID de la actividad actualmente en el formulario
+        /// </summary>
         public int IdActividad { get; set; }
 
         private string _nombre;
+        
+        /// <summary>
+        /// Nombre de la actividad en el formulario
+        /// </summary>
         public string Nombre
         {
             get => _nombre;
@@ -50,6 +64,10 @@ namespace CentroDeportivo.ViewModel.Views
         }
 
         private int _aforoMaximo;
+        
+        /// <summary>
+        /// Aforo máximo de la actividad
+        /// </summary>
         public int AforoMaximo
         {
             get => _aforoMaximo;
@@ -62,6 +80,10 @@ namespace CentroDeportivo.ViewModel.Views
 
         //Aquí guardamos mensajes de error para mostrarlos en pantalla.
         private string _mensajeError;
+        
+        /// <summary>
+        /// Mensaje de error que se muestra en la interfaz
+        /// </summary>
         public string MensajeError
         {
             get => _mensajeError;
@@ -72,12 +94,24 @@ namespace CentroDeportivo.ViewModel.Views
             }
         }
 
-        //Commands que se ejecutan cuando el usuario pulsa los botones.
+        /// <summary>
+        /// Comando para crear una nueva actividad
+        /// </summary>
         public ICommand CrearCommand { get; }
+        
+        /// <summary>
+        /// Comando para editar la actividad seleccionada
+        /// </summary>
         public ICommand EditarCommand { get; }
+        
+        /// <summary>
+        /// Comando para eliminar la actividad seleccionada
+        /// </summary>
         public ICommand EliminarCommand { get; }
 
-        //Constructor del ViewModel
+        /// <summary>
+        /// Constructor del ViewModel que inicializa servicios, carga datos y configura comandos
+        /// </summary>
         public ActividadesViewModel()
         {
             _actividadService = new ActividadService(); //Inicializamos el servicio.

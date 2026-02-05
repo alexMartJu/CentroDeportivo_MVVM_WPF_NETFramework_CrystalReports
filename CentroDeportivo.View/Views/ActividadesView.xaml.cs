@@ -18,9 +18,13 @@ namespace CentroDeportivo.View.Views
 {
     /// <summary>
     /// Lógica de interacción para ActividadesView.xaml
+    /// Vista que muestra la gestión de actividades
     /// </summary>
     public partial class ActividadesView : UserControl
     {
+        /// <summary>
+        /// Constructor que inicializa la vista de actividades y configura su ViewModel
+        /// </summary>
         public ActividadesView()
         {
             InitializeComponent();

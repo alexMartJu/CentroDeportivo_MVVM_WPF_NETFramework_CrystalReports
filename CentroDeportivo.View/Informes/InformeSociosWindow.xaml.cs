@@ -17,9 +17,13 @@ namespace CentroDeportivo.View.Informes
 {
     /// <summary>
     /// Lógica de interacción para InformeSociosWindow.xaml
+    /// Ventana que muestra el informe maestro de socios
     /// </summary>
     public partial class InformeSociosWindow : Window
     {
+        /// <summary>
+        /// Constructor que inicializa la ventana del informe de socios y carga el reporte
+        /// </summary>
         public InformeSociosWindow()
         {
             InitializeComponent();

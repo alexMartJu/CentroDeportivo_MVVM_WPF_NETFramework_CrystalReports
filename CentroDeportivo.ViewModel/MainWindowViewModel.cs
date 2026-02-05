@@ -9,11 +9,17 @@ using CentroDeportivo.ViewModel.Views;
 
 namespace CentroDeportivo.ViewModel
 {
-    //ViewModel de la ventana principal, se encarga de la navegación entre vistas
+    /// <summary>
+    /// ViewModel de la ventana principal, se encarga de la navegación entre vistas
+    /// </summary>
     public class MainWindowViewModel : BaseViewModel
     {
         //Propiedad que contiene la vista actual
         private BaseViewModel _vistaActual;
+        
+        /// <summary>
+        /// Vista actual que se muestra en el contenedor principal
+        /// </summary>
         public BaseViewModel VistaActual
         {
             get => _vistaActual;
@@ -27,6 +33,10 @@ namespace CentroDeportivo.ViewModel
 
         //Propiedad del título de la ventana
         private string _titulo;
+        
+        /// <summary>
+        /// Título dinámico de la ventana que cambia según la vista actual
+        /// </summary>
         public string Titulo
         {
             get => _titulo;
@@ -37,12 +47,29 @@ namespace CentroDeportivo.ViewModel
             }
         }
 
-        //Commands para cambiar de vista
+        /// <summary>
+        /// Comando para mostrar la vista de gestión de socios
+        /// </summary>
         public ICommand MostrarSociosCommand { get; }
+        
+        /// <summary>
+        /// Comando para mostrar la vista de gestión de actividades
+        /// </summary>
         public ICommand MostrarActividadesCommand { get; }
+        
+        /// <summary>
+        /// Comando para mostrar la vista de gestión de reservas
+        /// </summary>
         public ICommand MostrarReservasCommand { get; }
+        
+        /// <summary>
+        /// Comando para mostrar la vista de informes
+        /// </summary>
         public ICommand MostrarInformesCommand { get; }
 
+        /// <summary>
+        /// Constructor que inicializa la vista por defecto y los comandos de navegación
+        /// </summary>
         public MainWindowViewModel()
         {
             //Vista por defecto: socios y título inicial
@@ -56,7 +83,9 @@ namespace CentroDeportivo.ViewModel
             MostrarInformesCommand = new RelayCommand(_ => VistaActual = new InformesViewModel(null));
         }
 
-        //ActualizarTitulo() --> Método que actualiza el título según la vista actual
+        /// <summary>
+        /// ActualizarTitulo() --> Método que actualiza el título según la vista actual
+        /// </summary>
         private void ActualizarTitulo()
         {
             if (VistaActual is SociosViewModel)

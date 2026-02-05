@@ -7,10 +7,15 @@ using CentroDeportivo.Model;
 
 namespace CentroDeportivo.ViewModel.Informes.Helpers
 {
-    //Helper que carga los datos para el informe del historial de reservas.
+    /// <summary>
+    /// Helper que carga los datos para el informe del historial de reservas.
+    /// </summary>
     public class InformeHistorialHelper
     {
-        //Cargar() --> Método que obtiene los datos de la base de datos y los carga en el dataset.
+        /// <summary>
+        /// Cargar() --> Método que obtiene los datos de la base de datos y los carga en el dataset.
+        /// </summary>
+        /// <returns>Dataset con el historial completo de reservas ordenado por fecha</returns>
         public dsInformes Cargar()
         {
             var ds = new dsInformes();

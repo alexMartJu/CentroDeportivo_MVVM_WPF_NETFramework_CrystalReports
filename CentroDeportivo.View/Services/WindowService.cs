@@ -8,22 +8,31 @@ using CentroDeportivo.ViewModel.Services;
 
 namespace CentroDeportivo.View.Services
 {
-    //Implementación del servicio de ventanas para mostrar informes
+    /// <summary>
+    /// Implementación del servicio de ventanas para mostrar informes
+    /// </summary>
     public class WindowService : IWindowService
     {
-        //Método para mostrar el informe de socios
+        /// <summary>
+        /// Método para mostrar el informe de socios
+        /// </summary>
         public void MostrarInformeSocios() 
         { 
             new InformeSociosWindow().ShowDialog(); 
         }
 
-        //Método para mostrar el informe de reservas por actividad
+        /// <summary>
+        /// Método para mostrar el informe de reservas por actividad
+        /// </summary>
+        /// <param name="idActividad">ID de la actividad para filtrar las reservas</param>
         public void MostrarInformeReservasActividad(int idActividad) 
         {
             new InformeReservasActividadWindow(idActividad).ShowDialog();
         }
 
-        //Método para mostrar el informe del historial de reservas
+        /// <summary>
+        /// Método para mostrar el informe del historial de reservas
+        /// </summary>
         public void MostrarInformeHistorial() 
         { 
             new InformeHistorialReservasWindow().ShowDialog(); 

@@ -8,11 +8,16 @@ using CentroDeportivo.ViewModel.Services;
 
 namespace CentroDeportivo.ViewModel.Services
 {
-    //Servicio que se encarga de trabajar con los socios en la base de datos. 
-    //Aquí hacemos todas las operaciones: obtener, añadir, actualizar y eliminar socios.
+    /// <summary>
+    /// Servicio que se encarga de trabajar con los socios en la base de datos. 
+    /// Aquí hacemos todas las operaciones: obtener, añadir, actualizar y eliminar socios.
+    /// </summary>
     public class SocioService : ISocioService
     {
-        //GetAll() --> Método para obtener todos los socios de la base de datos
+        /// <summary>
+        /// GetAll() --> Método para obtener todos los socios de la base de datos
+        /// </summary>
+        /// <returns>Colección de socios</returns>
         public IEnumerable<Socios> GetAll()
         {
             try
@@ -31,7 +36,10 @@ namespace CentroDeportivo.ViewModel.Services
             }
         }
 
-        //Add() --> Método para añadir un nuevo socio a la base de datos
+        /// <summary>
+        /// Add() --> Método para añadir un nuevo socio a la base de datos
+        /// </summary>
+        /// <param name="socio">Socio a añadir</param>
         public void Add(Socios socio)
         {
             try
@@ -61,7 +69,10 @@ namespace CentroDeportivo.ViewModel.Services
             }
         }
 
-        //Update() --> Método para actualizar un socio existente en la base de datos
+        /// <summary>
+        /// Update() --> Método para actualizar un socio existente en la base de datos
+        /// </summary>
+        /// <param name="socio">Socio con los datos actualizados</param>
         public void Update(Socios socio)
         {
             try
@@ -102,7 +113,10 @@ namespace CentroDeportivo.ViewModel.Services
             }
         }
 
-        //Delete() --> Método para eliminar un socio de la base de datos
+        /// <summary>
+        /// Delete() --> Método para eliminar un socio de la base de datos
+        /// </summary>
+        /// <param name="socio">Socio a eliminar</param>
         public void Delete(Socios socio)
         {
             try

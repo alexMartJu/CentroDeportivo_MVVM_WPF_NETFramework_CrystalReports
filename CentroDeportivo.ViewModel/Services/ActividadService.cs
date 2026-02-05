@@ -8,11 +8,16 @@ using CentroDeportivo.ViewModel.Services;
 
 namespace CentroDeportivo.ViewModel.Services
 {
-    //Servicio que se encarga de trabajar con las actividades en la base de datos.
-    //Aquí hacemos todas las operaciones: obtener, añadir, actualizar y eliminar actividades.
+    /// <summary>
+    /// Servicio que se encarga de trabajar con las actividades en la base de datos.
+    /// Aquí hacemos todas las operaciones: obtener, añadir, actualizar y eliminar actividades.
+    /// </summary>
     public class ActividadService : IActividadService
     {
-        //GetAll() --> Método para obtener todas las actividades de la base de datos
+        /// <summary>
+        /// GetAll() --> Método para obtener todas las actividades de la base de datos
+        /// </summary>
+        /// <returns>Colección de actividades</returns>
         public IEnumerable<Actividades> GetAll()
         {
             try
@@ -29,7 +34,10 @@ namespace CentroDeportivo.ViewModel.Services
             }
         }
 
-        //Add() --> Método para añadir una nueva actividad a la base de datos
+        /// <summary>
+        /// Add() --> Método para añadir una nueva actividad a la base de datos
+        /// </summary>
+        /// <param name="actividad">Actividad a añadir</param>
         public void Add(Actividades actividad)
         {
             try
@@ -47,7 +55,10 @@ namespace CentroDeportivo.ViewModel.Services
             }
         }
 
-        //Update() --> Método para actualizar una actividad existente en la base de datos
+        /// <summary>
+        /// Update() --> Método para actualizar una actividad existente en la base de datos
+        /// </summary>
+        /// <param name="actividad">Actividad con los datos actualizados</param>
         public void Update(Actividades actividad)
         {
             try
@@ -77,7 +88,10 @@ namespace CentroDeportivo.ViewModel.Services
             }
         }
 
-        //Delete() --> Método para eliminar una actividad de la base de datos
+        /// <summary>
+        /// Delete() --> Método para eliminar una actividad de la base de datos
+        /// </summary>
+        /// <param name="actividad">Actividad a eliminar</param>
         public void Delete(Actividades actividad)
         {
             try

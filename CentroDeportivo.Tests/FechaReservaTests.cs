@@ -3,10 +3,15 @@ using CentroDeportivo.ViewModel.Views;
 
 namespace CentroDeportivo.Tests;
 
+/// <summary>
+/// Clase de pruebas para validar fechas de reservas
+/// </summary>
 [TestClass]
 public class FechaReservaTests
 {
-    //FechaAyer_DebeSerInvalida() --> Verifica que una reserva no pueda hacerse para una fecha pasada.
+    /// <summary>
+    /// FechaAyer_DebeSerInvalida() --> Verifica que una reserva no pueda hacerse para una fecha pasada.
+    /// </summary>
     [TestMethod]
     public void FechaAyer_DebeSerInvalida()
     {
@@ -23,7 +28,9 @@ public class FechaReservaTests
     }
 
 
-    //FechaAyer_DebeSerValida() --> Verifica que una reserva pueda hacerse para la fecha actual.
+    /// <summary>
+    /// FechaAyer_DebeSerValida() --> Verifica que una reserva pueda hacerse para la fecha actual.
+    /// </summary>
     [TestMethod]
     public void FechaAyer_DebeSerValida()
     {

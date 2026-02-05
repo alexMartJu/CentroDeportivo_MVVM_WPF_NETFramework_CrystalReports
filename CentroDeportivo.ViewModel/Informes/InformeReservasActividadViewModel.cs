@@ -9,13 +9,20 @@ using CrystalDecisions.CrystalReports.Engine;
 
 namespace CentroDeportivo.ViewModel.Informes
 {
-    //ViewModel que controla el informe de reservas por actividad.
+    /// <summary>
+    /// ViewModel que controla el informe de reservas por actividad.
+    /// </summary>
     public class InformeReservasActividadViewModel : BaseViewModel
     {
-        //Propiedad que contiene el informe de Crystal Reports.
+        /// <summary>
+        /// Propiedad que contiene el informe de Crystal Reports.
+        /// </summary>
         public ReportDocument Informe { get; }
 
-        //Constructor que carga los datos y prepara el informe.
+        /// <summary>
+        /// Constructor que carga los datos y prepara el informe.
+        /// </summary>
+        /// <param name="idActividad">ID de la actividad para filtrar las reservas</param>
         public InformeReservasActividadViewModel(int idActividad)
         {
             //Cargar los datos del informe utilizando el helper.

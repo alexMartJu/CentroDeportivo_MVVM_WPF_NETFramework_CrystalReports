@@ -11,7 +11,9 @@ using CentroDeportivo.ViewModel.Services;
 
 namespace CentroDeportivo.ViewModel.Views
 {
-    //ViewModel que controla toda la parte de reservas en la aplicación.
+    /// <summary>
+    /// ViewModel que controla toda la parte de reservas en la aplicación.
+    /// </summary>
     public class ReservasViewModel : BaseViewModel
     {
         //Servicios que se encargan de hablar con la base de datos.
@@ -19,14 +21,27 @@ namespace CentroDeportivo.ViewModel.Views
         private readonly ISocioService _socioService;
         private readonly IActividadService _actividadService;
 
-        //Lista de reservas que se muestra en el DataGrid.
+        /// <summary>
+        /// Lista de reservas que se muestra en el DataGrid.
+        /// </summary>
         public ObservableCollection<Reservas> Reservas { get; set; }
-        //Listas de socios y actividades para los ComboBox.
+        
+        /// <summary>
+        /// Lista de socios para el ComboBox.
+        /// </summary>
         public ObservableCollection<Socios> Socios { get; set; }
+        
+        /// <summary>
+        /// Lista de actividades para el ComboBox.
+        /// </summary>
         public ObservableCollection<Actividades> Actividades { get; set; }
 
         //Reserva que el usuario selecciona en el DataGrid.
         private Reservas _reservaSeleccionada;
+        
+        /// <summary>
+        /// Reserva seleccionada actualmente en el DataGrid
+        /// </summary>
         public Reservas ReservaSeleccionada
         {
             get => _reservaSeleccionada;
@@ -39,10 +54,16 @@ namespace CentroDeportivo.ViewModel.Views
             }
         }
 
-        //Propiedades del formulario donde el usuario escribe los datos.
+        /// <summary>
+        /// ID de la reserva actualmente en el formulario
+        /// </summary>
         public int IdReserva { get; set; }
 
         private Socios _socioSeleccionado;
+        
+        /// <summary>
+        /// Socio seleccionado en el ComboBox para la reserva
+        /// </summary>
         public Socios SocioSeleccionado
         {
             get => _socioSeleccionado;
@@ -54,6 +75,10 @@ namespace CentroDeportivo.ViewModel.Views
         }
 
         private Actividades _actividadSeleccionada;
+        
+        /// <summary>
+        /// Actividad seleccionada en el ComboBox para la reserva
+        /// </summary>
         public Actividades ActividadSeleccionada
         {
             get => _actividadSeleccionada;
@@ -65,6 +90,10 @@ namespace CentroDeportivo.ViewModel.Views
         }
 
         private DateTime _fecha = DateTime.Today;
+        
+        /// <summary>
+        /// Fecha de la reserva
+        /// </summary>
         public DateTime Fecha
         {
             get => _fecha;
@@ -76,6 +105,10 @@ namespace CentroDeportivo.ViewModel.Views
         }
 
         private string _mensajeError;
+        
+        /// <summary>
+        /// Mensaje de error que se muestra en la interfaz
+        /// </summary>
         public string MensajeError
         {
             get => _mensajeError;
@@ -86,12 +119,24 @@ namespace CentroDeportivo.ViewModel.Views
             }
         }
 
-        //Commands que se ejecutan cuando el usuario pulsa los botones.
+        /// <summary>
+        /// Comando para crear una nueva reserva
+        /// </summary>
         public ICommand CrearCommand { get; }
+        
+        /// <summary>
+        /// Comando para editar la reserva seleccionada
+        /// </summary>
         public ICommand EditarCommand { get; }
+        
+        /// <summary>
+        /// Comando para eliminar la reserva seleccionada
+        /// </summary>
         public ICommand EliminarCommand { get; }
 
-        //Constructor del ViewModel
+        /// <summary>
+        /// Constructor del ViewModel que inicializa servicios, carga datos y configura comandos
+        /// </summary>
         public ReservasViewModel()
         {
             //Inicializamos servicios
@@ -111,7 +156,12 @@ namespace CentroDeportivo.ViewModel.Views
 
         //Métodos que comprueban si se pueden ejecutar las acciones.
         //Si devuelven false, el botón se deshabilita automáticamente.
-        //EsFechaValida() --> Comprueba si la fecha es hoy o posterior.
+        
+        /// <summary>
+        /// EsFechaValida() --> Comprueba si la fecha es hoy o posterior.
+        /// </summary>
+        /// <param name="fecha">Fecha a validar</param>
+        /// <returns>True si la fecha es válida, false en caso contrario</returns>
         public bool EsFechaValida(DateTime fecha)
         {
             return fecha.Date >= DateTime.Today;

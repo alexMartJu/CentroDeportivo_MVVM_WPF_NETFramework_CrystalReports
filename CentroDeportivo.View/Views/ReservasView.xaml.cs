@@ -18,9 +18,13 @@ namespace CentroDeportivo.View.Views
 {
     /// <summary>
     /// Lógica de interacción para ReservasView.xaml
+    /// Vista que muestra la gestión de reservas
     /// </summary>
     public partial class ReservasView : UserControl
     {
+        /// <summary>
+        /// Constructor que inicializa la vista de reservas y configura su ViewModel
+        /// </summary>
         public ReservasView()
         {
             InitializeComponent();

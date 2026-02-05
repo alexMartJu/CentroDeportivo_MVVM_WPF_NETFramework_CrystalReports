@@ -9,13 +9,19 @@ using CrystalDecisions.CrystalReports.Engine;
 
 namespace CentroDeportivo.ViewModel.Informes
 {
-    //ViewModel que controla el informe de socios.
+    /// <summary>
+    /// ViewModel que controla el informe de socios.
+    /// </summary>
     public class InformeSociosViewModel : BaseViewModel
     {
-        //Propiedad que contiene el informe de Crystal Reports.
+        /// <summary>
+        /// Propiedad que contiene el informe de Crystal Reports.
+        /// </summary>
         public ReportDocument Informe { get; }
 
-        //Constructor que carga los datos y prepara el informe.
+        /// <summary>
+        /// Constructor que carga los datos y prepara el informe.
+        /// </summary>
         public InformeSociosViewModel()
         {
             //Cargar los datos del informe utilizando el helper.

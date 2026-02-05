@@ -7,10 +7,15 @@ using CentroDeportivo.Model;
 
 namespace CentroDeportivo.ViewModel.Informes.Helpers
 {
-    //Helper que carga los datos de los socios para el informe.
+    /// <summary>
+    /// Helper que carga los datos de los socios para el informe.
+    /// </summary>
     public class InformeSociosHelper
     {
-        //CargarSocios() --> Método que carga los datos de los socios desde la base de datos.
+        /// <summary>
+        /// CargarSocios() --> Método que carga los datos de los socios desde la base de datos.
+        /// </summary>
+        /// <returns>Dataset con los datos de los socios para el informe</returns>
         public dsInformes CargarSocios()
         {
             var ds = new dsInformes();
