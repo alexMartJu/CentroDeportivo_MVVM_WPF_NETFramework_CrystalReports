@@ -83,6 +83,7 @@ Antes de instalar la aplicación, asegúrese de cumplir con los siguientes requi
 
 1. **Publicar la aplicación desde Visual Studio**:
    - Abra el proyecto en Visual Studio 2022 o superior
+   - Cambia la solución a Release (arriba, desplegable Debug → Release).
    - Haga clic derecho sobre el proyecto `CentroDeportivo.View`
    - Seleccione **"Publicar"** (Publish)
 
