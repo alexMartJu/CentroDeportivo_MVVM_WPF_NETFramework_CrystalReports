@@ -1,0 +1,96 @@
+\doxysection{Centro\+Deportivo.\+View\+Model.\+Relay\+Command Class Reference}
+\hypertarget{class_centro_deportivo_1_1_view_model_1_1_relay_command}{}\label{class_centro_deportivo_1_1_view_model_1_1_relay_command}\index{CentroDeportivo.ViewModel.RelayCommand@{CentroDeportivo.ViewModel.RelayCommand}}
+
+
+Comando genérico reutilizable para MVVM que implementa ICommand.  
+
+
+Inheritance diagram for Centro\+Deportivo.\+View\+Model.\+Relay\+Command:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_centro_deportivo_1_1_view_model_1_1_relay_command}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_centro_deportivo_1_1_view_model_1_1_relay_command_a753a0e9c023ebd311626738622697dad}{Relay\+Command}} (Action$<$ object $>$ execute, Func$<$ object, bool $>$ can\+Execute=null)
+\begin{DoxyCompactList}\small\item\em Constructor:\+ recibe la acción a ejecutar y la condición opcional. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_centro_deportivo_1_1_view_model_1_1_relay_command_a16abc9a41f00711c1f5b61cb117a9123}{Can\+Execute}} (object parameter)
+\begin{DoxyCompactList}\small\item\em Indica si el comando se puede ejecutar. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_centro_deportivo_1_1_view_model_1_1_relay_command_aeb9deb36ea2fa728e4c3f468bf8e294d}{Execute}} (object parameter)
+\begin{DoxyCompactList}\small\item\em Acción que se ejecuta al lanzar el comando. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_centro_deportivo_1_1_view_model_1_1_relay_command_a7678c6737f864cbd8e4e6e7989620e4b}\label{class_centro_deportivo_1_1_view_model_1_1_relay_command_a7678c6737f864cbd8e4e6e7989620e4b} 
+Event\+Handler {\bfseries Can\+Execute\+Changed}\hspace{0.3cm}{\ttfamily  \+[add, remove]\+}
+\begin{DoxyCompactList}\small\item\em Eventos que WPF escucha para reevaluar el estado del comando (habilitado/\+deshabilitado). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Comando genérico reutilizable para MVVM que implementa ICommand. 
+
+\label{doc-constructors}
+\Hypertarget{class_centro_deportivo_1_1_view_model_1_1_relay_command_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_centro_deportivo_1_1_view_model_1_1_relay_command_a753a0e9c023ebd311626738622697dad}\index{CentroDeportivo.ViewModel.RelayCommand@{CentroDeportivo.ViewModel.RelayCommand}!RelayCommand@{RelayCommand}}
+\index{RelayCommand@{RelayCommand}!CentroDeportivo.ViewModel.RelayCommand@{CentroDeportivo.ViewModel.RelayCommand}}
+\doxysubsubsection{\texorpdfstring{RelayCommand()}{RelayCommand()}}
+{\footnotesize\ttfamily \label{class_centro_deportivo_1_1_view_model_1_1_relay_command_a753a0e9c023ebd311626738622697dad} 
+Centro\+Deportivo.\+View\+Model.\+Relay\+Command.\+Relay\+Command (\begin{DoxyParamCaption}\item[{Action$<$ object $>$}]{execute}{, }\item[{Func$<$ object, bool $>$}]{can\+Execute}{ = {\ttfamily null}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor:\+ recibe la acción a ejecutar y la condición opcional. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em execute} & Acción a ejecutar cuando se invoca el comando\\
+\hline
+{\em can\+Execute} & Función opcional que determina si el comando puede ejecutarse\\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_centro_deportivo_1_1_view_model_1_1_relay_command_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_centro_deportivo_1_1_view_model_1_1_relay_command_a16abc9a41f00711c1f5b61cb117a9123}\index{CentroDeportivo.ViewModel.RelayCommand@{CentroDeportivo.ViewModel.RelayCommand}!CanExecute@{CanExecute}}
+\index{CanExecute@{CanExecute}!CentroDeportivo.ViewModel.RelayCommand@{CentroDeportivo.ViewModel.RelayCommand}}
+\doxysubsubsection{\texorpdfstring{CanExecute()}{CanExecute()}}
+{\footnotesize\ttfamily \label{class_centro_deportivo_1_1_view_model_1_1_relay_command_a16abc9a41f00711c1f5b61cb117a9123} 
+bool Centro\+Deportivo.\+View\+Model.\+Relay\+Command.\+Can\+Execute (\begin{DoxyParamCaption}\item[{object}]{parameter}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Indica si el comando se puede ejecutar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parameter} & Parámetro del comando\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True si el comando puede ejecutarse, false en caso contrario
+\end{DoxyReturn}
+\Hypertarget{class_centro_deportivo_1_1_view_model_1_1_relay_command_aeb9deb36ea2fa728e4c3f468bf8e294d}\index{CentroDeportivo.ViewModel.RelayCommand@{CentroDeportivo.ViewModel.RelayCommand}!Execute@{Execute}}
+\index{Execute@{Execute}!CentroDeportivo.ViewModel.RelayCommand@{CentroDeportivo.ViewModel.RelayCommand}}
+\doxysubsubsection{\texorpdfstring{Execute()}{Execute()}}
+{\footnotesize\ttfamily \label{class_centro_deportivo_1_1_view_model_1_1_relay_command_aeb9deb36ea2fa728e4c3f468bf8e294d} 
+void Centro\+Deportivo.\+View\+Model.\+Relay\+Command.\+Execute (\begin{DoxyParamCaption}\item[{object}]{parameter}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Acción que se ejecuta al lanzar el comando. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parameter} & Parámetro del comando\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Centro\+Deportivo.\+View\+Model/\+Relay\+Command.\+cs\end{DoxyCompactItemize}

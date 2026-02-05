@@ -1,0 +1,75 @@
+\doxysection{Centro\+Deportivo.\+View\+Model.\+Views.\+Informes\+View\+Model Class Reference}
+\hypertarget{class_centro_deportivo_1_1_view_model_1_1_views_1_1_informes_view_model}{}\label{class_centro_deportivo_1_1_view_model_1_1_views_1_1_informes_view_model}\index{CentroDeportivo.ViewModel.Views.InformesViewModel@{CentroDeportivo.ViewModel.Views.InformesViewModel}}
+
+
+\doxylink{namespace_centro_deportivo_1_1_view_model}{View\+Model} que controla la generación de informes en la aplicación.  
+
+
+Inheritance diagram for Centro\+Deportivo.\+View\+Model.\+Views.\+Informes\+View\+Model:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_centro_deportivo_1_1_view_model_1_1_views_1_1_informes_view_model}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_centro_deportivo_1_1_view_model_1_1_views_1_1_informes_view_model_a564fb7f7d20f68d4c5e33c4d32e838b0}{Informes\+View\+Model}} (\doxymbox{\hyperlink{interface_centro_deportivo_1_1_view_model_1_1_services_1_1_i_window_service}{IWindow\+Service}} window\+Service)
+\begin{DoxyCompactList}\small\item\em Constructor que inicializa los servicios, carga las actividades y configura los comandos de informes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_centro_deportivo_1_1_view_model_1_1_views_1_1_informes_view_model_a5e86dc6ae9d858832649af2b39634952}\label{class_centro_deportivo_1_1_view_model_1_1_views_1_1_informes_view_model_a5e86dc6ae9d858832649af2b39634952} 
+Observable\+Collection$<$ Actividades $>$ {\bfseries Actividades}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\begin{DoxyCompactList}\small\item\em Lista de actividades que se muestra en el Combo\+Box. \end{DoxyCompactList}\item 
+\Hypertarget{class_centro_deportivo_1_1_view_model_1_1_views_1_1_informes_view_model_ab81ee6f8dc0173289783a0943c84f6a0}\label{class_centro_deportivo_1_1_view_model_1_1_views_1_1_informes_view_model_ab81ee6f8dc0173289783a0943c84f6a0} 
+\doxymbox{\hyperlink{class_centro_deportivo_1_1_view_model_1_1_views_1_1_informes_view_model_a5e86dc6ae9d858832649af2b39634952}{Actividades}} {\bfseries Actividad\+Seleccionada}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\begin{DoxyCompactList}\small\item\em Actividad seleccionada para el informe de reservas por actividad. \end{DoxyCompactList}\item 
+\Hypertarget{class_centro_deportivo_1_1_view_model_1_1_views_1_1_informes_view_model_afc82e738c7175afadf485b0786f53b2b}\label{class_centro_deportivo_1_1_view_model_1_1_views_1_1_informes_view_model_afc82e738c7175afadf485b0786f53b2b} 
+ICommand {\bfseries Informe\+Socios\+Command}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em Comando para generar el informe de socios. \end{DoxyCompactList}\item 
+\Hypertarget{class_centro_deportivo_1_1_view_model_1_1_views_1_1_informes_view_model_a706c2593dbecd7351aecaeac0f4b4452}\label{class_centro_deportivo_1_1_view_model_1_1_views_1_1_informes_view_model_a706c2593dbecd7351aecaeac0f4b4452} 
+ICommand {\bfseries Informe\+Reservas\+Actividad\+Command}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em Comando para generar el informe de reservas por actividad. \end{DoxyCompactList}\item 
+\Hypertarget{class_centro_deportivo_1_1_view_model_1_1_views_1_1_informes_view_model_a2fa89a9a0e8a996ea06627e524d2274d}\label{class_centro_deportivo_1_1_view_model_1_1_views_1_1_informes_view_model_a2fa89a9a0e8a996ea06627e524d2274d} 
+ICommand {\bfseries Informe\+Historial\+Command}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em Comando para generar el informe del historial de reservas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \doxymbox{\hyperlink{class_centro_deportivo_1_1_view_model_1_1_base_view_model}{Centro\+Deportivo.\+View\+Model.\+Base\+View\+Model}}}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_centro_deportivo_1_1_view_model_1_1_base_view_model_a90c2ef8d017c50e87195330dc6625812}{On\+Property\+Changed}} (string property\+Name)
+\begin{DoxyCompactList}\small\item\em Método que lanza el evento de cambio de propiedad. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Events inherited from \doxymbox{\hyperlink{class_centro_deportivo_1_1_view_model_1_1_base_view_model}{Centro\+Deportivo.\+View\+Model.\+Base\+View\+Model}}}
+\begin{DoxyCompactItemize}
+\item 
+Property\+Changed\+Event\+Handler {\bfseries Property\+Changed}
+\begin{DoxyCompactList}\small\item\em Evento que se dispara cuando una propiedad cambia su valor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{namespace_centro_deportivo_1_1_view_model}{View\+Model} que controla la generación de informes en la aplicación. 
+
+\label{doc-constructors}
+\Hypertarget{class_centro_deportivo_1_1_view_model_1_1_views_1_1_informes_view_model_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_centro_deportivo_1_1_view_model_1_1_views_1_1_informes_view_model_a564fb7f7d20f68d4c5e33c4d32e838b0}\index{CentroDeportivo.ViewModel.Views.InformesViewModel@{CentroDeportivo.ViewModel.Views.InformesViewModel}!InformesViewModel@{InformesViewModel}}
+\index{InformesViewModel@{InformesViewModel}!CentroDeportivo.ViewModel.Views.InformesViewModel@{CentroDeportivo.ViewModel.Views.InformesViewModel}}
+\doxysubsubsection{\texorpdfstring{InformesViewModel()}{InformesViewModel()}}
+{\footnotesize\ttfamily \label{class_centro_deportivo_1_1_view_model_1_1_views_1_1_informes_view_model_a564fb7f7d20f68d4c5e33c4d32e838b0} 
+Centro\+Deportivo.\+View\+Model.\+Views.\+Informes\+View\+Model.\+Informes\+View\+Model (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{interface_centro_deportivo_1_1_view_model_1_1_services_1_1_i_window_service}{IWindow\+Service}}}]{window\+Service}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor que inicializa los servicios, carga las actividades y configura los comandos de informes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window\+Service} & Servicio para mostrar ventanas de informes\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Centro\+Deportivo.\+View\+Model/\+\+Views/\+Informes\+View\+Model.\+cs\end{DoxyCompactItemize}

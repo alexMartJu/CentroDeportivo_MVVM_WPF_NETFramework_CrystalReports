@@ -1,0 +1,137 @@
+\doxysection{Centro\+Deportivo.\+View\+Model.\+Services.\+IReserva\+Service Interface Reference}
+\hypertarget{interface_centro_deportivo_1_1_view_model_1_1_services_1_1_i_reserva_service}{}\label{interface_centro_deportivo_1_1_view_model_1_1_services_1_1_i_reserva_service}\index{CentroDeportivo.ViewModel.Services.IReservaService@{CentroDeportivo.ViewModel.Services.IReservaService}}
+
+
+Interfaz para las operaciones de reservas.  
+
+
+Inheritance diagram for Centro\+Deportivo.\+View\+Model.\+Services.\+IReserva\+Service:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_centro_deportivo_1_1_view_model_1_1_services_1_1_i_reserva_service}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+IEnumerable$<$ \doxymbox{\hyperlink{class_centro_deportivo_1_1_model_1_1_reservas}{Reservas}} $>$ \doxymbox{\hyperlink{interface_centro_deportivo_1_1_view_model_1_1_services_1_1_i_reserva_service_a129b271622db588136b951602030cc00}{Get\+All}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene todas las reservas de la base de datos. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{interface_centro_deportivo_1_1_view_model_1_1_services_1_1_i_reserva_service_a47c691954c056cd63c5492fe55f1b872}{Add}} (\doxymbox{\hyperlink{class_centro_deportivo_1_1_model_1_1_reservas}{Reservas}} reserva)
+\begin{DoxyCompactList}\small\item\em Añade una nueva reserva a la base de datos. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{interface_centro_deportivo_1_1_view_model_1_1_services_1_1_i_reserva_service_a1f82022e570fa5f3b13c6c6a47537b14}{Update}} (\doxymbox{\hyperlink{class_centro_deportivo_1_1_model_1_1_reservas}{Reservas}} reserva)
+\begin{DoxyCompactList}\small\item\em Actualiza una reserva existente en la base de datos. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{interface_centro_deportivo_1_1_view_model_1_1_services_1_1_i_reserva_service_a9d2f1958c41c4bc2c975e3ec0abcd6f0}{Delete}} (\doxymbox{\hyperlink{class_centro_deportivo_1_1_model_1_1_reservas}{Reservas}} reserva)
+\begin{DoxyCompactList}\small\item\em Elimina una reserva de la base de datos. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{interface_centro_deportivo_1_1_view_model_1_1_services_1_1_i_reserva_service_a8bbb9dbc34dc2987d990c9d95a76093d}{Hay\+Aforo\+Disponible}} (int id\+Actividad, Date\+Time fecha)
+\begin{DoxyCompactList}\small\item\em Comprueba si hay aforo disponible para una actividad en una fecha específica. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interfaz para las operaciones de reservas. 
+
+\label{doc-func-members}
+\Hypertarget{interface_centro_deportivo_1_1_view_model_1_1_services_1_1_i_reserva_service_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interface_centro_deportivo_1_1_view_model_1_1_services_1_1_i_reserva_service_a47c691954c056cd63c5492fe55f1b872}\index{CentroDeportivo.ViewModel.Services.IReservaService@{CentroDeportivo.ViewModel.Services.IReservaService}!Add@{Add}}
+\index{Add@{Add}!CentroDeportivo.ViewModel.Services.IReservaService@{CentroDeportivo.ViewModel.Services.IReservaService}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily \label{interface_centro_deportivo_1_1_view_model_1_1_services_1_1_i_reserva_service_a47c691954c056cd63c5492fe55f1b872} 
+void Centro\+Deportivo.\+View\+Model.\+Services.\+IReserva\+Service.\+Add (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_centro_deportivo_1_1_model_1_1_reservas}{Reservas}}}]{reserva}{}\end{DoxyParamCaption})}
+
+
+
+Añade una nueva reserva a la base de datos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reserva} & Reserva a añadir\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \doxymbox{\hyperlink{class_centro_deportivo_1_1_view_model_1_1_services_1_1_reserva_service_ae23f8313e97eca4e91b71b6329d1492a}{Centro\+Deportivo.\+View\+Model.\+Services.\+Reserva\+Service}}.
+
+\Hypertarget{interface_centro_deportivo_1_1_view_model_1_1_services_1_1_i_reserva_service_a9d2f1958c41c4bc2c975e3ec0abcd6f0}\index{CentroDeportivo.ViewModel.Services.IReservaService@{CentroDeportivo.ViewModel.Services.IReservaService}!Delete@{Delete}}
+\index{Delete@{Delete}!CentroDeportivo.ViewModel.Services.IReservaService@{CentroDeportivo.ViewModel.Services.IReservaService}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily \label{interface_centro_deportivo_1_1_view_model_1_1_services_1_1_i_reserva_service_a9d2f1958c41c4bc2c975e3ec0abcd6f0} 
+void Centro\+Deportivo.\+View\+Model.\+Services.\+IReserva\+Service.\+Delete (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_centro_deportivo_1_1_model_1_1_reservas}{Reservas}}}]{reserva}{}\end{DoxyParamCaption})}
+
+
+
+Elimina una reserva de la base de datos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reserva} & Reserva a eliminar\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \doxymbox{\hyperlink{class_centro_deportivo_1_1_view_model_1_1_services_1_1_reserva_service_af0522e913b12c140fed6c897121bbe2f}{Centro\+Deportivo.\+View\+Model.\+Services.\+Reserva\+Service}}.
+
+\Hypertarget{interface_centro_deportivo_1_1_view_model_1_1_services_1_1_i_reserva_service_a129b271622db588136b951602030cc00}\index{CentroDeportivo.ViewModel.Services.IReservaService@{CentroDeportivo.ViewModel.Services.IReservaService}!GetAll@{GetAll}}
+\index{GetAll@{GetAll}!CentroDeportivo.ViewModel.Services.IReservaService@{CentroDeportivo.ViewModel.Services.IReservaService}}
+\doxysubsubsection{\texorpdfstring{GetAll()}{GetAll()}}
+{\footnotesize\ttfamily \label{interface_centro_deportivo_1_1_view_model_1_1_services_1_1_i_reserva_service_a129b271622db588136b951602030cc00} 
+IEnumerable$<$ \doxymbox{\hyperlink{class_centro_deportivo_1_1_model_1_1_reservas}{Reservas}} $>$ Centro\+Deportivo.\+View\+Model.\+Services.\+IReserva\+Service.\+Get\+All (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Obtiene todas las reservas de la base de datos. 
+
+\begin{DoxyReturn}{Returns}
+Colección de reservas
+\end{DoxyReturn}
+
+
+Implemented in \doxymbox{\hyperlink{class_centro_deportivo_1_1_view_model_1_1_services_1_1_reserva_service_ad8fc3a240694fc9e4bbfd742520b1363}{Centro\+Deportivo.\+View\+Model.\+Services.\+Reserva\+Service}}.
+
+\Hypertarget{interface_centro_deportivo_1_1_view_model_1_1_services_1_1_i_reserva_service_a8bbb9dbc34dc2987d990c9d95a76093d}\index{CentroDeportivo.ViewModel.Services.IReservaService@{CentroDeportivo.ViewModel.Services.IReservaService}!HayAforoDisponible@{HayAforoDisponible}}
+\index{HayAforoDisponible@{HayAforoDisponible}!CentroDeportivo.ViewModel.Services.IReservaService@{CentroDeportivo.ViewModel.Services.IReservaService}}
+\doxysubsubsection{\texorpdfstring{HayAforoDisponible()}{HayAforoDisponible()}}
+{\footnotesize\ttfamily \label{interface_centro_deportivo_1_1_view_model_1_1_services_1_1_i_reserva_service_a8bbb9dbc34dc2987d990c9d95a76093d} 
+bool Centro\+Deportivo.\+View\+Model.\+Services.\+IReserva\+Service.\+Hay\+Aforo\+Disponible (\begin{DoxyParamCaption}\item[{int}]{id\+Actividad}{, }\item[{Date\+Time}]{fecha}{}\end{DoxyParamCaption})}
+
+
+
+Comprueba si hay aforo disponible para una actividad en una fecha específica. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\+Actividad} & ID de la actividad\\
+\hline
+{\em fecha} & Fecha de la reserva\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True si hay aforo disponible, false en caso contrario
+\end{DoxyReturn}
+
+
+Implemented in \doxymbox{\hyperlink{class_centro_deportivo_1_1_view_model_1_1_services_1_1_reserva_service_a65f8fc665d71ad87779773621a4daa5f}{Centro\+Deportivo.\+View\+Model.\+Services.\+Reserva\+Service}}.
+
+\Hypertarget{interface_centro_deportivo_1_1_view_model_1_1_services_1_1_i_reserva_service_a1f82022e570fa5f3b13c6c6a47537b14}\index{CentroDeportivo.ViewModel.Services.IReservaService@{CentroDeportivo.ViewModel.Services.IReservaService}!Update@{Update}}
+\index{Update@{Update}!CentroDeportivo.ViewModel.Services.IReservaService@{CentroDeportivo.ViewModel.Services.IReservaService}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{interface_centro_deportivo_1_1_view_model_1_1_services_1_1_i_reserva_service_a1f82022e570fa5f3b13c6c6a47537b14} 
+void Centro\+Deportivo.\+View\+Model.\+Services.\+IReserva\+Service.\+Update (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_centro_deportivo_1_1_model_1_1_reservas}{Reservas}}}]{reserva}{}\end{DoxyParamCaption})}
+
+
+
+Actualiza una reserva existente en la base de datos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reserva} & Reserva con los datos actualizados\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \doxymbox{\hyperlink{class_centro_deportivo_1_1_view_model_1_1_services_1_1_reserva_service_a81e8a74e897440556924e5d7a97bac5c}{Centro\+Deportivo.\+View\+Model.\+Services.\+Reserva\+Service}}.
+
+
+
+The documentation for this interface was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Centro\+Deportivo.\+View\+Model/\+\+Services/\+IReserva\+Service.\+cs\end{DoxyCompactItemize}

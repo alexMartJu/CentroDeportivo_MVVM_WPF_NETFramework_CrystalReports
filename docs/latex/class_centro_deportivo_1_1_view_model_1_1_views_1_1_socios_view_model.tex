@@ -1,0 +1,96 @@
+\doxysection{Centro\+Deportivo.\+View\+Model.\+Views.\+Socios\+View\+Model Class Reference}
+\hypertarget{class_centro_deportivo_1_1_view_model_1_1_views_1_1_socios_view_model}{}\label{class_centro_deportivo_1_1_view_model_1_1_views_1_1_socios_view_model}\index{CentroDeportivo.ViewModel.Views.SociosViewModel@{CentroDeportivo.ViewModel.Views.SociosViewModel}}
+
+
+\doxylink{namespace_centro_deportivo_1_1_view_model}{View\+Model} que controla toda la parte de socios en la aplicación. Aquí gestionamos lo que se muestra en pantalla y lo que hace el usuario.  
+
+
+Inheritance diagram for Centro\+Deportivo.\+View\+Model.\+Views.\+Socios\+View\+Model:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_centro_deportivo_1_1_view_model_1_1_views_1_1_socios_view_model}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_centro_deportivo_1_1_view_model_1_1_views_1_1_socios_view_model_a6abef90b2ec3515250c1b2a30350b0e4}\label{class_centro_deportivo_1_1_view_model_1_1_views_1_1_socios_view_model_a6abef90b2ec3515250c1b2a30350b0e4} 
+{\bfseries Socios\+View\+Model} ()
+\begin{DoxyCompactList}\small\item\em Constructor del \doxylink{namespace_centro_deportivo_1_1_view_model}{View\+Model} que inicializa servicios, carga datos y configura comandos. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_centro_deportivo_1_1_view_model_1_1_views_1_1_socios_view_model_ac0c914875fc3592aa14b54e787447932}{Es\+Email\+Valido}} (string email)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_centro_deportivo_1_1_view_model_1_1_views_1_1_socios_view_model_ac0c914875fc3592aa14b54e787447932}{Es\+Email\+Valido()} -\/-\/\texorpdfstring{$>$}{>} Comprueba si un email tiene un formato básico válido. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_centro_deportivo_1_1_view_model_1_1_views_1_1_socios_view_model_ad64a70ba4b6bf0c1fb935b8094594f28}\label{class_centro_deportivo_1_1_view_model_1_1_views_1_1_socios_view_model_ad64a70ba4b6bf0c1fb935b8094594f28} 
+Observable\+Collection$<$ Socios $>$ {\bfseries Socios}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\begin{DoxyCompactList}\small\item\em Lista de socios que se muestra en el Data\+Grid. Observable\+Collection se usa para que la pantalla se actualice sola cuando cambia la lista. \end{DoxyCompactList}\item 
+\Hypertarget{class_centro_deportivo_1_1_view_model_1_1_views_1_1_socios_view_model_a00f009a46fc4e908e8271735652bcea5}\label{class_centro_deportivo_1_1_view_model_1_1_views_1_1_socios_view_model_a00f009a46fc4e908e8271735652bcea5} 
+\doxymbox{\hyperlink{class_centro_deportivo_1_1_view_model_1_1_views_1_1_socios_view_model_ad64a70ba4b6bf0c1fb935b8094594f28}{Socios}} {\bfseries Socio\+Seleccionado}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\begin{DoxyCompactList}\small\item\em Socio seleccionado actualmente en el Data\+Grid. \end{DoxyCompactList}\item 
+\Hypertarget{class_centro_deportivo_1_1_view_model_1_1_views_1_1_socios_view_model_ab4b225bfdcab06ed440ad0523708224a}\label{class_centro_deportivo_1_1_view_model_1_1_views_1_1_socios_view_model_ab4b225bfdcab06ed440ad0523708224a} 
+int {\bfseries Id\+Socio}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\begin{DoxyCompactList}\small\item\em ID del socio actualmente en el formulario. \end{DoxyCompactList}\item 
+\Hypertarget{class_centro_deportivo_1_1_view_model_1_1_views_1_1_socios_view_model_aa2af58e77fcf30b2ae4411ef82d9ad37}\label{class_centro_deportivo_1_1_view_model_1_1_views_1_1_socios_view_model_aa2af58e77fcf30b2ae4411ef82d9ad37} 
+string {\bfseries Nombre}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\begin{DoxyCompactList}\small\item\em Nombre del socio en el formulario. \end{DoxyCompactList}\item 
+\Hypertarget{class_centro_deportivo_1_1_view_model_1_1_views_1_1_socios_view_model_a53b8bbf14f57e289dd19ea9f8acdf4a1}\label{class_centro_deportivo_1_1_view_model_1_1_views_1_1_socios_view_model_a53b8bbf14f57e289dd19ea9f8acdf4a1} 
+string {\bfseries Email}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\begin{DoxyCompactList}\small\item\em Email del socio en el formulario. \end{DoxyCompactList}\item 
+\Hypertarget{class_centro_deportivo_1_1_view_model_1_1_views_1_1_socios_view_model_a29bea755b9039f39b8fab0521685eca5}\label{class_centro_deportivo_1_1_view_model_1_1_views_1_1_socios_view_model_a29bea755b9039f39b8fab0521685eca5} 
+bool {\bfseries Activo}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\begin{DoxyCompactList}\small\item\em Estado activo/\+inactivo del socio. \end{DoxyCompactList}\item 
+\Hypertarget{class_centro_deportivo_1_1_view_model_1_1_views_1_1_socios_view_model_ac50b84f9b8789bac8bae7fa19fa54bba}\label{class_centro_deportivo_1_1_view_model_1_1_views_1_1_socios_view_model_ac50b84f9b8789bac8bae7fa19fa54bba} 
+string {\bfseries Mensaje\+Error}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\begin{DoxyCompactList}\small\item\em Mensaje de error que se muestra en la interfaz. \end{DoxyCompactList}\item 
+\Hypertarget{class_centro_deportivo_1_1_view_model_1_1_views_1_1_socios_view_model_a8be00257d50c9cf37b0838a9f4f32d21}\label{class_centro_deportivo_1_1_view_model_1_1_views_1_1_socios_view_model_a8be00257d50c9cf37b0838a9f4f32d21} 
+ICommand {\bfseries Crear\+Command}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em Comando para crear un nuevo socio. \end{DoxyCompactList}\item 
+\Hypertarget{class_centro_deportivo_1_1_view_model_1_1_views_1_1_socios_view_model_a8deac7b15e8ac47de2d58b36f07c7ce3}\label{class_centro_deportivo_1_1_view_model_1_1_views_1_1_socios_view_model_a8deac7b15e8ac47de2d58b36f07c7ce3} 
+ICommand {\bfseries Editar\+Command}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em Comando para editar el socio seleccionado. \end{DoxyCompactList}\item 
+\Hypertarget{class_centro_deportivo_1_1_view_model_1_1_views_1_1_socios_view_model_a6a73c0cee31c8fa0aba450b6c916ed68}\label{class_centro_deportivo_1_1_view_model_1_1_views_1_1_socios_view_model_a6a73c0cee31c8fa0aba450b6c916ed68} 
+ICommand {\bfseries Eliminar\+Command}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em Comando para eliminar el socio seleccionado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \doxymbox{\hyperlink{class_centro_deportivo_1_1_view_model_1_1_base_view_model}{Centro\+Deportivo.\+View\+Model.\+Base\+View\+Model}}}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_centro_deportivo_1_1_view_model_1_1_base_view_model_a90c2ef8d017c50e87195330dc6625812}{On\+Property\+Changed}} (string property\+Name)
+\begin{DoxyCompactList}\small\item\em Método que lanza el evento de cambio de propiedad. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Events inherited from \doxymbox{\hyperlink{class_centro_deportivo_1_1_view_model_1_1_base_view_model}{Centro\+Deportivo.\+View\+Model.\+Base\+View\+Model}}}
+\begin{DoxyCompactItemize}
+\item 
+Property\+Changed\+Event\+Handler {\bfseries Property\+Changed}
+\begin{DoxyCompactList}\small\item\em Evento que se dispara cuando una propiedad cambia su valor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{namespace_centro_deportivo_1_1_view_model}{View\+Model} que controla toda la parte de socios en la aplicación. Aquí gestionamos lo que se muestra en pantalla y lo que hace el usuario. 
+
+\label{doc-func-members}
+\Hypertarget{class_centro_deportivo_1_1_view_model_1_1_views_1_1_socios_view_model_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_centro_deportivo_1_1_view_model_1_1_views_1_1_socios_view_model_ac0c914875fc3592aa14b54e787447932}\index{CentroDeportivo.ViewModel.Views.SociosViewModel@{CentroDeportivo.ViewModel.Views.SociosViewModel}!EsEmailValido@{EsEmailValido}}
+\index{EsEmailValido@{EsEmailValido}!CentroDeportivo.ViewModel.Views.SociosViewModel@{CentroDeportivo.ViewModel.Views.SociosViewModel}}
+\doxysubsubsection{\texorpdfstring{EsEmailValido()}{EsEmailValido()}}
+{\footnotesize\ttfamily \label{class_centro_deportivo_1_1_view_model_1_1_views_1_1_socios_view_model_ac0c914875fc3592aa14b54e787447932} 
+bool Centro\+Deportivo.\+View\+Model.\+Views.\+Socios\+View\+Model.\+Es\+Email\+Valido (\begin{DoxyParamCaption}\item[{string}]{email}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxylink{class_centro_deportivo_1_1_view_model_1_1_views_1_1_socios_view_model_ac0c914875fc3592aa14b54e787447932}{Es\+Email\+Valido()} -\/-\/\texorpdfstring{$>$}{>} Comprueba si un email tiene un formato básico válido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em email} & Email a validar\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True si el email es válido, false en caso contrario
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Centro\+Deportivo.\+View\+Model/\+\+Views/\+Socios\+View\+Model.\+cs\end{DoxyCompactItemize}

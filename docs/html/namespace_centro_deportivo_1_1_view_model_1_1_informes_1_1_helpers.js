@@ -1,0 +1,6 @@
+var namespace_centro_deportivo_1_1_view_model_1_1_informes_1_1_helpers =
+[
+    [ "InformeHistorialHelper", "class_centro_deportivo_1_1_view_model_1_1_informes_1_1_helpers_1_1_informe_historial_helper.html", "class_centro_deportivo_1_1_view_model_1_1_informes_1_1_helpers_1_1_informe_historial_helper" ],
+    [ "InformeReservasActividadHelper", "class_centro_deportivo_1_1_view_model_1_1_informes_1_1_helpers_1_1_informe_reservas_actividad_helper.html", "class_centro_deportivo_1_1_view_model_1_1_informes_1_1_helpers_1_1_informe_reservas_actividad_helper" ],
+    [ "InformeSociosHelper", "class_centro_deportivo_1_1_view_model_1_1_informes_1_1_helpers_1_1_informe_socios_helper.html", "class_centro_deportivo_1_1_view_model_1_1_informes_1_1_helpers_1_1_informe_socios_helper" ]
+];
